@@ -7,6 +7,9 @@ body {
 	font-family: sans-serif;
 }
 
+a:link {
+	text-decoration: none;
+}
 #screen {
 	height: 530px;
 	width: 300px;
@@ -30,6 +33,11 @@ body {
 .back-button {
 	float:left;
 	margin-top: 1px;
+}
+
+.back-button img {
+	width: 42;
+	height: 40;
 }
 
 /* 
@@ -129,41 +137,136 @@ body {
 		border: 1px solid grey;
 		margin-bottom: .5rem;
 		padding-left: .25rem;
+		border-radius: 3px;
 }
 
 /* 
 	Player 
 			*/
-.player-album-art {
-	
-}
-
-.player-song-info {
-	
+.player-album-art img {
+	width: 250px;
+	height: 250px;
+	margin: 25px 25px 10px;
+	box-shadow: 1px 1px 1px grey;
 }
 
 #player-song-name {
-	
+	text-align: center;
+	margin: 0;
+}
+
+.player-song-info {
+	text-align: center;
+	margin: 5;
+	margin-bottom: 3;
+	font-size: .9rem;
+	color: #062E63;
+}
+
+#time-end-values {
+	width: 300;
+	height: 10;
+	font-size: .8rem;
+}
+
+#start {
+	float:left;
+	margin-left: 30;
+}
+
+#end {
+	float:right;
+	margin-right: 30;
 }
 
 .volume-bar {
-	
+	float: left;
+	margin-left: 32;	
 }
 
 .volume-level {
-	
+	height: 6px;
+	width: 24px;
+	border: 1px solid black;
+	display: inline-block;
+	border-radius: 3px;
+	margin-bottom: 8;
+	box-shadow: .5px .5px .5px grey;
+}
+
+.volume-fill {
+	height: 6px;
+	width: 24px;
+	border: 1px solid black;
+	display: inline-block;
+	border-radius: 3px;
+	margin-bottom: 8;
+	background-color: #778899;
+	box-shadow: .5px .5px .5px grey;
 }
 
 .volume-rocker {
-	
+	width: 300;
+}
+
+#volume-up {
+	float: right;
+	margin-right: 50;
+	width: 90;
+	height: 15;
+	text-align: center;
+	line-height: 1;
+}
+
+#volume-down {
+	float: left;
+	margin-left: 50;
+	width: 90;
+	height: 15;
+	text-align: center;
+	line-height: 0.75;
 }
 
 .player-controls{
-	
+	text-align: center;	
+	margin-bottom: 10;
 }
 
 #player-time {
-	
+	text-align:center;
+	margin-bottom: 0;
+}
+
+/* input range styling */
+input[type=range] {
+  height: 20px;
+  width: 80%;
+  -webkit-appearance: none;
+  margin: 5px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: .5px 1px 1px black;
+  background: #778899;
+  border-radius: 14px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: .5px 1px #000000;
+  border: 0px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background: #529DE1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
 }
 
 #time-elapsed {

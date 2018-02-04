@@ -1,0 +1,63 @@
+<html>
+<head>
+   <title>Music Player</title>
+   <link rel="stylesheet" type="text/css" href="ipod.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+   <div id="screen">
+     <div class="head-bar"
+>      <div class="back-button">
+        <a href="songs.html">
+          <img src="images/left3.png">
+        </a>
+      </div>
+   </div>
+   <div class="player-album-art">
+     <img src="images/saturation.jpg" alt="Saturation Album Cover"/>
+   </div>
+   <div>
+      <p id="player-song-name"></p>
+      <p class="player-song-info"><em>Saturation</em> - Brockhampton</p>
+   </div>
+   <div id="player-time">
+     <input id="slider" type="range" value="0" min="0" max="180">
+   </div>
+     <div id="time-end-values">
+       <div id="start">0:00</div>
+       <div id="end">3:00</div>
+     </div>
+   <div class="player-controls">
+      <button onclick="prevSong()">
+        <i class="material-icons">skip_previous</i>
+      </button>
+      <button onclick="switchPlay()"">
+         <i id="play" class="material-icons">play_arrow</i>
+      </button>
+      <button onclick="nextSong()">
+        <i class="material-icons">skip_next</i>
+      </button>
+   </div>
+   <div class="volume-bar">
+      <div class="material-icons">volume_down</div>
+      <div class="volume-level" id="vl0"></div>
+      <div class="volume-level" id="vl1"></div>
+      <div class="volume-level" id="vl2"></div>
+      <div class="volume-level" id="vl3"></div>
+      <div class="volume-level" id="vl4"></div>
+      <div class="volume-level" id="vl5"></div>
+   </div>
+   <div class="volume-rocker">
+     <button id="volume-down" onclick="volDown()">&mdash;</button>
+     <button id="volume-up" onclick="volUp()">+</button>
+   </div>
+</div>
+<script src="ipod.js"></script>
+</body>
+
+</html>
+<!-- 
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
